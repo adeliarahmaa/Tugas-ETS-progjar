@@ -42,6 +42,23 @@ class FileInterface:
             return dict(status='OK')
         except Exception as e:
             return dict(status='ERROR',data=str(e))
+  
+    def delete(self,params=[]):
+        try:
+            filename=params[0]
+            if(filename==''):
+                return None
+            os.remove(filename)
+            return dict(status="OK")
+        except Exception as e:
+            return dict(status="ERROR",data=str(e))
+
+
+
+if __name__=='__main__':
+    f = FileInterface()
+    print(f.list())
+    print(f.get(['pokijan.jpg']))
 
 
 
