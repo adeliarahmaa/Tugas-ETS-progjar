@@ -39,7 +39,7 @@ class Server:
             self.executor.submit(proses_client, connection, address)
 
 def main():
-    svr = Server(ipaddress='0.0.0.0', port=6666)
+    svr = Server(ipaddress='0.0.0.0', port=6665)
     svr.run()
 
 if __name__ == "__main__":
