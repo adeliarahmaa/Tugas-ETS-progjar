@@ -4,7 +4,7 @@ import base64
 import logging
 from concurrent.futures import ThreadPoolExecutor
 
-server_address = ('172.16.16.101', 9999)
+server_address = ('172.16.16.101', 6665)
 logging.basicConfig(level=logging.WARNING)
 
 def send_command(command_str=""):
@@ -81,7 +81,7 @@ def remote_download(filename=""):
 
 
 if __name__ == '__main__':
-    server_address=(('172.16.16.101', 9999))
+    server_address=(('172.16.16.101', 6665))
     file_target = 'donalbebek.jpg'
 
     with ThreadPoolExecutor(max_workers=4) as executor:
